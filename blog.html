@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Blog Ting</title>
+	<link rel="stylesheet" href="src/bootstrap.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="src/bootstrap.js"></script>
+
+ 	<style type="text/css">
+ 		@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+		@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i');
+
+		body {
+			color: #3F3F3F;
+			font-family: "Vidaloka";
+		}
+
+		::selection { 
+			background: #ffff00; 
+		} 
+
+ 		.header {
+ 			position: relative;
+ 			height: 100px;
+ 		}
+
+ 		.name {
+ 			position: relative;
+ 			font-size: 20px;
+ 			float: left;
+ 			left: 40px;
+ 			top: 50px;
+ 			-webkit-font-smoothing: antialiased;
+ 		}
+
+ 		.name_link {
+ 			color: #3F3F3F;
+ 			text-decoration: none;
+ 		}
+
+ 		.name_link:hover {
+ 			color: #3F3F3F;
+ 		}
+
+ 		.about {
+ 			position: relative;
+ 			font-size: 16px;
+ 			float: right;
+ 			right: 40px;
+ 			top: 56px;
+ 			-webkit-font-smoothing: antialiased;
+ 		}
+
+ 		.container {
+ 			width: 720px;
+ 		}
+
+ 		.panel {
+ 			border: none;
+ 			border-bottom: 1px solid #f2f2f2;
+ 			padding-top: 10px;
+ 			-webkit-box-shadow: none;
+ 		}
+
+ 		.panel-default .panel-heading {
+ 			background-color: #fff;
+ 		}
+
+ 		.panel-title {
+ 			font-size: 24px;
+ 			font-weight: normal;
+ 			-webkit-font-smoothing: antialiased;
+
+ 		}
+
+ 		#panel-body {
+ 			border-top-color: #f2f2f2;
+ 			font-family: "Raleway";
+ 			font-size: 16px;
+ 			font-weight: 300;
+ 			line-height: 26px;
+ 		}
+
+ 		img {
+ 			position: relative;
+ 			width: 600px;
+ 			height: auto;
+ 			left: 30px;
+ 		}
+
+ 		a:focus {
+ 			text-decoration: none;
+ 		}
+
+ 		a:hover {
+ 			text-decoration: none;
+ 		}
+
+ 		.strike {
+ 			position: relative;
+ 		}
+ 		.strike:hover::after {
+ 			content: '';
+ 			position: absolute;
+ 			top: 45%;
+ 			border-bottom: 5px solid #ffff00;
+ 			left: 0;
+ 			width: 100%;
+ 		}
+
+ 		@media only screen and (max-width: 1180px) {
+ 			.header {
+ 				width: 720px;
+ 				height: 150px;
+ 				padding-left: 30px;
+ 				margin: auto;
+ 			}
+
+ 			.name {
+ 				float: none;
+ 				left: 0;
+ 			}
+
+ 			.about {
+ 				float: none;
+ 				right: initial;
+ 			}
+ 		}
+
+ 		@media only screen and (max-width: 745px) {
+ 			.container {
+ 				width: 100%;
+ 			}
+
+ 			.header {
+ 				width: 100%;
+ 			}
+ 		}
+ 	</style>
+
+</head>
+<body>
+
+	<div class="header">
+		<div class="name"><a class="name_link" href="http://dhankar.ca">Aditya Dhankar</a></div>
+		<div class="about">It's a blog ting</div>
+	</div>
+
+	<div class="container">
+		<div class="panel-group" id="accordion">
+	    	<div class="panel panel-default">
+	      		<div class="panel-heading">
+	        		<h4 class="panel-title">
+	        			<a data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="collapsed" href="#collapse1"><span class="strike">How to Study the Future Trends?</span></a>
+	        		</h4>
+	      		</div>
+
+	      		<div id="collapse1" class="panel-collapse collapse" aria-expanded="false">
+	        		<div class="panel-body" id="panel-body">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br><br>
+	        		Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. <br><br><br>
+
+	        		<img src="src/imgs/blog_imgs/graph.png">
+
+	        		<br><br><br>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br><br><br>
+
+	        		<img src="src/imgs/blog_imgs/chart.png">
+
+	        		<br><br><br> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+	      		</div>
+	    	</div>
+
+	    	<div class="panel panel-default">
+	      		<div class="panel-heading">
+	        		<h4 class="panel-title">
+	          			<a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><span class="strike">DeMar DeRozan's Midrange Game</span></a>
+	        		</h4>
+	      		</div>
+
+	      		<div id="collapse6" class="panel-collapse collapse">
+	        		<div class="panel-body" id="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>
+
+	        		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+	      		</div>
+	    	</div>
+
+	    	<div class="panel panel-default">
+	      		<div class="panel-heading">
+	        		<h4 class="panel-title">
+	          			<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><span class="strike">Path to Investment Banking</span></a>
+	        		</h4>
+	      		</div>
+
+	      		<div id="collapse2" class="panel-collapse collapse">
+	        		<div class="panel-body" id="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>
+
+	        		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+	      		</div>
+	    	</div>
+
+	    	<div class="panel panel-default">
+	      		<div class="panel-heading">
+	        		<h4 class="panel-title">
+	          			<a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><span class="strike">What Are Financial Instruments?</span></a>
+	        		</h4>
+	      		</div>
+
+	      		<div id="collapse3" class="panel-collapse collapse">
+	        		<div class="panel-body" id="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br><br>
+
+	        		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+	      		</div>
+	    	</div>
+
+	    	<div class="panel panel-default">
+	      		<div class="panel-heading">
+	        		<h4 class="panel-title">
+	          			<a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><span class="strike">A Decade of Toronto's Housing Market</span></a>
+	        		</h4>
+	      		</div>
+
+	      		<div id="collapse4" class="panel-collapse collapse">
+	        		<div class="panel-body" id="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+	      		</div>
+	    	</div>
+
+	    	<div class="panel panel-default">
+	      		<div class="panel-heading">
+	        		<h4 class="panel-title">
+	          			<a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><span class="strike">What's This Blog About?</span></a>
+	        		</h4>
+	      		</div>
+
+	      		<div id="collapse5" class="panel-collapse collapse">
+	        		<div class="panel-body" id="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+	      		</div>
+	    	</div>
+
+	  	</div> 
+	</div>
+
+<!-- Page Fade Out/In -->
+<script>
+	$(document).ready(function() {
+		$('body').css('display', 'none');
+		$('body').fadeIn(1000);
+
+		$('a.name_link').click(function(event) {
+			event.preventDefault();
+			newLocation = this.href;
+			window.location = newLocation;
+		});
+	});
+</script>
+
+</body>
+</html>

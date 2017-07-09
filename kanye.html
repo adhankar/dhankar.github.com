@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Kanye</title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+		@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i');
+
+		body {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			font-family: "Vidaloka";
+			color: #3F3F3F;
+		}
+
+		::selection { 
+			background: #ffff00; 
+		} 
+
+		 .header {
+ 			position: relative;
+ 			height: 100px;
+ 		}
+
+ 		.name {
+ 			position: relative;
+ 			font-size: 20px;
+ 			float: left;
+ 			left: 40px;
+ 			top: 50px;
+ 		}
+
+ 		.about {
+ 			position: relative;
+ 			font-size: 16px;
+ 			float: right;
+ 			right: 40px;
+ 			top: 56px;
+ 		}
+
+ 		a {
+ 			color: #3F3F3F;
+ 			text-decoration: none;
+ 		}
+
+		.container {
+			position: absolute;
+			display: table;
+			width: 100%;
+			height: calc(100% - 100px);
+		}
+
+		#img_container {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			width: 60%;
+		}
+
+		#lyrics {
+			font-family: "Raleway";
+			font-size: 25px;
+			font-weight: 200;
+
+		}
+
+		.rank_box {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.rank {
+			display: table-cell;
+			font-size: 25px;
+			line-height: 35px;
+			list-style-type: none;
+		}
+
+		@media only screen and (max-width: 1154px) {
+			#lyrics {
+				font-size: 18px;
+				line-height: 33px;
+			}
+
+			.rank {
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+
+		@media only screen and (max-width: 855px) {
+			img {
+				width: 400px;
+				height: 400px;
+			}
+
+	</style>
+
+</head>
+<body>	
+
+	<div class="header">
+		<div class="name"><a href="http://dhankar.ca">Aditya Dhankar</a></div>
+		<div class="about"><a href="https://embed.vevo.com/?isrc=USUV71601791">I feel like Pablo</a></div>
+	</div>
+
+	<div class="container">
+		<div id="img_container">
+
+			<p id="lyrics">
+			"I miss the old Kanye, straight from the Go Kanye<br>
+			Chop up the soul Kanye, set on his goals Kanye<br>
+			I hate the new Kanye, the bad mood Kanye<br>
+			The always rude Kanye, spaz in the news Kanye<br>
+			I miss the sweet Kanye, chop up the beats Kanye<br>
+			I gotta say, at that time I'd like to meet Kanye<br>
+			See, I invented Kanye, it wasn't any Kanyes<br>
+			And now I look and look around and there's so many Kanyes<br>
+			I used to love Kanye, I used to love Kanye<br>
+			I even had the pink polo, I thought I was Kanye<br>
+			What if Kanye made a song about Kanye<br>
+			Called "I Miss The Old Kanye"? Man, that'd be so Kanye<br>
+			That's all it was Kanye, we still love Kanye<br>
+			And I love you like Kanye loves Kanye"<br>
+			</p> 
+
+		</div>
+
+		<div class="rank_box">
+			<ul class="rank">
+				<li onmouseenter= "hover('mbdtf')" onmouseleave="revert()">My Beautiful Dark Twisted Fantasy</li>
+				<li onmouseover ="hover('yeezus')" onmouseleave="revert()">Yeezus</li>
+				<li onmouseover ="hover('dropout')" onmouseleave="revert()">The College Dropout</li>
+				<li onmouseover ="hover('tlop')" onmouseleave="revert()">The Life of Pablo</li>
+				<li onmouseover ="hover('graduation')" onmouseleave="revert()">Graduation</li>
+				<li onmouseover ="hover('late')" onmouseleave="revert()">Late Registration</li>
+				<li onmouseover ="hover('throne')" onmouseleave="revert()">Watch the Throne</li>
+				<li onmouseover ="hover('808')" onmouseleave="revert()">808s &amp; Heartbreak</li>
+				<li onmouseover ="hover('cruel')" onmouseleave="revert()">Cruel Summer</li>
+			</ul>
+		</div>
+	</div>
+
+<!-- Hover Change -->
+<script>
+	function hover(album) {
+		document.getElementById('img_container').innerHTML = "<img src='src/imgs/kanye/" +album+ ".png'>";
+	}
+
+	function revert() {
+		var lyrics = "<p id='lyrics'> &quot;I miss the old Kanye, straight from the Go Kanye<br>Chop up the soul Kanye, set on his goals Kanye<br>I hate the new Kanye, the bad mood Kanye<br>The always rude Kanye, spaz in the news Kanye<br>I miss the sweet Kanye, chop up the beats Kanye<br>I gotta say, at that time I&apos;d like to meet Kanye<br>See, I invented Kanye, it wasn&apos;t any Kanyes<br>And now I look and look around and there&apos;s so many Kanyes<br>I used to love Kanye, I used to love Kanye<br>I even had the pink polo, I thought I was Kanye<br>What if Kanye made a song about Kanye<br>Called &quot;I Miss The Old Kanye&quot;? Man, that&apos;d be so Kanye<br>That&apos;s all it was Kanye, we still love Kanye<br>And I love you like Kanye loves Kanye&quot;<br></p>"
+		document.getElementById('img_container').innerHTML = lyrics;
+	}
+</script>
+
+<!-- Page Fade Out/In -->
+<script>
+	$(document).ready(function() {
+		$('body').css('display', 'none');
+		$('body').fadeIn(1000);
+
+		$('a').click(function(event) {
+			event.preventDefault();
+			newLocation = this.href;
+			window.location = newLocation;
+		});
+	});
+</script> 
+
+</body>
+</html>

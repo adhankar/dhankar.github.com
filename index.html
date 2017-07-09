@@ -3,24 +3,25 @@
 <head>
 	<title>Aditya Dhankar</title>
 	<link type="text/css" rel="stylesheet" href="src/stylesheet.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="src/drawing.js"></script>
 </head>
 <body>
 
 	<canvas id="canvas"></canvas>
-	<div class="content" id="main-content">
+	<div class="content">
 		<div class="name_info">
 		
 			<h1 id="name"> Aditya Dhankar </h1>
 			<span id="subject"> Math &amp; Stats</span>
 
-			<p id="info">I am Aditya Dhankar and I'm a student. I study at the University of Toronto. I plan on being an Investment Banker. Why? Here, read <a href="URL">this</a>. It's my <a href="URL">blog</a>, I update it time to time. Speaking of rare events, I also take top notch amateur <a href="URL">photos</a>. Ha. Lastly, my favourite artist is Kanye West, feel free to agree or disagree. I'd like to <a href="URL">hear</a> your opinion. </p>
+			<p id="info">Hey, my name's Aditya. I study at the University of Toronto and I'm going to be an Investment Banker. I've laid out my steps in one of my blogs. You can find it <a href="blog.html">here</a>. Also, shoutout to my favourite artist, <a href="kanye.html">Kanye West</a>, thanks for showing me what passion means. Now, the fruits I consume are passion fruits.</p>
 
 		</div>
-			
 	</div>
 
-<script type="text/javascript">
+<!-- Canvas Script -->
+<script>
 	var body = document.getElementsByTagName("BODY")[0],
 	canvas = document.getElementById('canvas'),
 	ctx = canvas.getContext('2d'),
@@ -64,6 +65,7 @@
 		}
 	}
 
+	// Helper function for draw
 	function drawHelper(arg) {
 		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 		ctx.beginPath();
@@ -93,6 +95,31 @@
 		out =  "[" + out.substring(0,out.length-1) + "]";
 		console.log(out);
 	}
+</script>
+
+<!-- Page Fade Out/In -->
+<script>
+	$(document).ready(function() {
+		$('body').css('display', 'none');
+		$('body').fadeIn(1000);
+
+		$('a').click(function(event) {
+			event.preventDefault();
+			newLocation = this.href;
+			window.location = newLocation;
+		});
+	});
+</script>
+
+<!-- Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102300843-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
 
