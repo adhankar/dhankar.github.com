@@ -36,20 +36,20 @@ body {
 
 #name {
 	font-family: "Vidaloka";
-	font-size: 26px;
+	font-size: 30px;
 }
 
 #subject {
 	position: relative;
 	font-family: "Raleway";
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: 200;
 	top: -0.8em;
 }
 
 #info {
 	font-family: "Raleway";
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: 200;
 	line-height: 40px;
 }
