@@ -1,107 +1,51 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
 	<title>Aditya Dhankar</title>
-	<link type="text/css" rel="stylesheet" href="src/stylesheet.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="src/drawing.js"></script>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+		body {
+			background-color: black;
+		}
+		
+		.text {
+			position: absolute;
+			color: white;
+			font-family: "Space Mono";
+			font-weight: 700;
+			font-style: italic;
+			font-size: 2.5em;
+			margin: 0px auto 0px -210px;
+			z-index: 1000;
+		}
+
+		div {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -315px -560px;	
+		}
+	</style>
+
 </head>
 <body>
 
-	<canvas id="canvas"></canvas>
-	<div class="content">
-		<div class="name_info">
-		
-			<h1 id="name"> Aditya Dhankar </h1>
-			<span id="subject"> Math &amp; Stats</span>
-
-			<p id="info">Hey, my name's Aditya. I study at the University of Toronto and I'm going to be an Investment Banker. I've laid out my steps in one of my blogs. You can find it <a href="blog">here</a>. Also, shoutout to my favourite artist, <a href="kanye">Kanye West</a>, thanks for showing me what passion means. Now, the fruits I consume are passion fruits.</p>
-
-		</div>
+	<div class="text">
+		website DOWN DOWN		
 	</div>
 
-<!-- Canvas Script -->
-<script>
-	var body = document.getElementsByTagName("BODY")[0],
-	canvas = document.getElementById('canvas'),
-	ctx = canvas.getContext('2d'),
-	drawing = [],
-	points = [];
+	<div>
+		<iframe width="1120" height="630" src="https://www.youtube.com/embed/HwkFPSQPqvM?start=142&autoplay=1" frameborder="0" allowfullscreen></iframe>
+	</div>
 
-	if(typeof existingArt != "undefined") {
-		drawing = existingArt;
-	}
-
-	// Update canvas dimensions
-	function update() {
-		canvas.width = window.innerWidth * 0.3;
-		// We subtract 2 for the border of the parent box
-		canvas.height = body.offsetHeight - 2;
-		ctx.lineWidth = 1;
-		ctx.lineJoin = ctx.lineCap = 'round';
-		removeCanvas();
-		draw();
-	}
-
-	// Remove canvas
-	function removeCanvas() {
-		if (canvas.height < 596 || canvas.width < 1160*0.3) {
-			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-			ctx.beginPath();
-			canvas.height = 0;
-			canvas.width = 0;
-		}
-
-	}
-
-	// Draw from histroy
-	function draw() {
-		if(0 < drawing.length) {
-			drawHelper(drawing);
-		}
-
-		if(0 < points.length) {
-			drawHelper(points);
-		}
-	}
-
-	// Helper function for draw
-	function drawHelper(arg) {
-		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-		ctx.beginPath();
-		ctx.moveTo(arg[0].x, arg[0].y);
-		for (var i = 1; i < arg.length; i++) {
-			ctx.lineTo(arg[i].x, arg[i].y);
-		}
-		ctx.stroke();
-	}
-
-
-	window.onload = update;
-	window.onresize = update;
-
-	canvas.onmousemove = function(e) {
-		drawing = [];
-		points.push({ x: e.clientX, y: e.clientY });
-		draw();
-	};
-
-	// Write out points for easy print
-	function writePoints() {
-		var out = "";
-		for(var i = 0; i < points.length; i++) {
-			out += ("{ x:"+points[i].x + ", y:" + points[i].y + "},");
-		}
-		out =  "[" + out.substring(0,out.length-1) + "]";
-		console.log(out);
-	}
-</script>
 
 <!-- Page Fade Out/In -->
 <script>
 	$(document).ready(function() {
 		$('body').css('display', 'none');
-		$('body').fadeIn(1000);
+		$('body').fadeIn(3000);
 
 		$('a').click(function(event) {
 			event.preventDefault();
@@ -122,6 +66,5 @@
   ga('send', 'pageview');
 
 </script>
-
 </body>
 </html>
