@@ -3,45 +3,26 @@
 <head>
 
 	<title>Aditya Dhankar</title>
+	<link type="text/css" rel="stylesheet" href="src/stylesheet.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<style type="text/css">
-		@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
-		body {
-			background-color: black;
-		}
-		
-		.text {
-			position: absolute;
-			color: white;
-			font-family: "Space Mono";
-			font-weight: 700;
-			font-style: italic;
-			font-size: 2.5em;
-			margin: 0px auto 0px -210px;
-			z-index: 1000;
-		}
-
-		div {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin: -315px -560px;	
-		}
-	</style>
 
 </head>
 <body>
 
-	<div class="text">
-		website DOWN DOWN		
+	<div class="container">
+		<div class="header"> 
+			<div class="name">Aditya Dhankar</div>
+			<div class="contact"> <a href="#Contact">Contact</a> </div>
+		</div>
+
+		<div class="content">
+			<p>
+				I study mathematics and statistics. I like finance. I like to analyze companies. I particularly enjoy valuation. I find it very satisfying to understand the value of something. I like to <a href="#Blog">write</a>. Play me 1-on-1 in ball. LeBron James is the GOAT. Don't <a href="#Twitter">@</a> me. I miss the old Kanye.
+			</p>
+		</div>
 	</div>
 
-	<div>
-		<iframe width="1120" height="630" src="https://www.youtube.com/embed/HwkFPSQPqvM?start=142&autoplay=1" frameborder="0" allowfullscreen></iframe>
-	</div>
 
-
-<!-- Page Fade Out/In -->
 <script>
 	$(document).ready(function() {
 		$('body').css('display', 'none');
@@ -54,6 +35,7 @@
 		});
 	});
 </script>
+
 
 <!-- Google Analytics-->
 <script>
