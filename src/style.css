@@ -1,0 +1,100 @@
+@font-face {
+	font-family: Sabon;
+	src: url("Sabon-Normal-Normal.woff") format("woff");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: Sabon;
+	src: url("Sabon-Normal-Bold.woff") format("woff");
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: Sabon;
+	src: url("Sabon-Italic-Normal.woff") format("woff");
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face {
+	font-family: Sabon;
+	src: url("Sabon-Italic-Bold.woff") format("woff");
+	font-style: italic;
+	font-weight: bold;
+}
+
+html, body {
+	width: 100%;
+ 	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Sabon, "Times New Roman", Georgia, serif;
+	background-color: #FFF;
+	color: #000;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: left;
+}
+
+#container, #post-date {
+	/*background: red;*/
+	width: 94%;
+	padding: 3%;
+	max-width: 640px;
+	text-align: left;
+}
+
+#post-date {
+	/*background: red;*/
+	display: inline-block;
+	font-size: 13px;
+	font-style: italic;
+	color: rgba(0,0,0,0.4);
+}
+
+h1 {
+	line-height: 1.1;
+}
+
+ul {
+	margin: 0;
+}
+
+li {
+	margin: 5px 0px;
+	padding: 0;
+	list-style-type: circle;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	padding-bottom: 1px;
+	border-bottom: 1px dotted #9c9ba5;
+}
+
+a:hover {
+	border-bottom: 1px solid #000;
+}
+
+blockquote {
+	border-left: 1px dotted rgba(0,0,0,0.4);
+	padding: 0px 10px;
+	margin: 0px 45px;
+}
+
+img {
+	border: none;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+iframe {
+	width: 100%;
+	height: auto;
+}
