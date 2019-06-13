@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aditya's Blog</title>
+  <meta name="author" content="Aditya Dhankar">
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="../src/start.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+<center><div id="container">
+  <h1>Regression Analysis</h1>
+
+  <p>I recently took one of my favourite courses in university: regression analysis. Since I really enjoyed this course, I decided to summarize the entire course in a few paragraphs and do it in such a way that a person from non-statistics/non-mathematics background can understand. So let’s get started.</p>
+
+  <h3>What is Regression Analysis?</h3>
+
+  <p>The first thing we learn in regression analysis is to develop a regression equation that models the relationship between a dependent variable, $ Y $ and multiple predictor variables $ x_1,x_2,x_3 $ etc. Once we have developed our model we would like to analyze it by performing regression diagnostics to check whether our model is valid or invalid.</p>
+
+  <p>So what the hell is a regression equation or a regression model? Well, to begin with, they are actually one and the same. A regression model just describes the relationship between a dependent variable $ Y $ and a predictor variable $ x $. I believe the best way to understand is to start with an example.</p>
+
+  <h3>Example</h3>
+
+  <p>Suppose we want to model the relationship between $ Y $, salary in a particular industry and $ x $, the number of years of experience in that industry. To start, we plot $ Y $ vs. $ x $.</p>
+
+  <img src="img_1.jpg">
+
+  <p>After a naive analysis of the plot suppose we come up with the following regression model: $ Y=β_0+β_1x+e$. This regression model describes a linear relationship between $ Y $ and $ x $. This would result in the following regression line:</p>
+
+  <img src="img_2.jpg">
+
+  <p>After graphing the regression line on to the plot we can visually see that our regression model is invalid. The plot seems to display quadratic behaviour and our model clearly does not account for that. Now after careful consideration we arrive at the following regression model: $Y=β_0+β_1x+β_2x^2+e$. Again, let’s graph this regression model on to the plot and visually analyze the result.</p>
+
+  <img src="img_3.jpg">
+
+  <p>It is clear that the latter regression model seems to describe the relationship between $ Y $, salary in a particular industry and $ x $, the number of years of experience in that industry better than our first regression model. </p>
+
+  <p>This is essentially what regression analysis is. We develop a regression model to describe the relationship between a dependent variable, $ Y $ and the predictor variables $x_1,x_2,x_3$, etc. Once we have done that we perform regression diagnostics to check the validity of our model. If the results provide evidence against a valid model we must try to understand the problems within our model and try to correct our model.</p>
+
+  <h3>Regression Diagnostics</h3>
+
+  <p>As I’ve said earlier, once we develop our regression model we’d like to check if it is valid or not, for that we have regression diagnostics. Regression diagnostic is not just about visually analyzing the regression model to check if it’s a good fit or not, though it’s a good place to start, it is much more than that. The following is sort of a “check-list” of things we must analyze to determine the validity of our model.</p>
+
+  <ul>
+    <li>1. The main tool that is used to validate our regression model is the standardized residual plots</li>
+    <li>2. We must determine the leverage points within our data set</li>
+    <li>3. We must determine whether outliers exist</li>
+    <li>4. We must determine whether constant variance of errors in our model is reasonable and whether they are normally distributed</li>
+    <li>5. If the data is collected over time, we want to examine whether the data is correlated over time</li>
+  </ul>
+
+  <p>Standardized residual plots are arguably the most useful tool to determine the validity of the regression model. If there are any problems within steps 2 to 5, they would reflect in the residual plots. So to keep things simple, I will only talk about standardized residual plots. However, before I dive into that, it’s important to understand what residuals.</p>
+
+  <p>To understand what residuals are, we have to go back a few steps. It’s crucial that you understand that the regression model we come up with is an estimate of the actual model. We never really know what the true model is. Since we are working with an estimated model, it makes sense that there exists some “differences” between the actual and the estimated model. In statistics, we can these “differences” residuals. To get a visual, consider the graph below.</p>
+
+  <img src="img_4.jpg">
+
+  <p>The solid linear line is our estimated regression model and the points on the graph are the actual values. Our estimated regression model is estimating the $ Y $ value to be roughly 3 when $ X=2 $ but notice the actual value is roughly 7 when $ X=2 $. So our residual, $ê_3 $, is roughly equal to 4. </p>
+
+  <p>Now that we understand what residuals are, let’s talk about standardized residuals. The best way to think about standardized residuals is that they are just residuals which have been scaled down; since it’s usually easier to work with smaller numbers.</p>
+
+  <p>Now finally we can discuss standardized residual plots. These are just plots of standardized residuals vs. the predictor variables. Consider the regression model: $ Y=β_0+β_1x_1+β_2x_2+β_3x_3+β_4x_4+e $, where $ Y $ is price, $ x_1 $ is food rating, $ x_2 $ is decor rating, $ x_3 $ is service rating and $ x_4 $ is the location of a restaurant, either to the east or west of a certain street. These predictor variables determines the price of the food at a restaurant. The following figure represents the standardized residual plots for this model.</p>
+
+  <img src="img_5.jpg">
+
+  <p>When analyzing residual plots we check whether these plots are deterministic or not. In essence, we are checking to see if these plots display any patterns. If there are signs of pattern, we say the model is invalid. We would like the plots to be random. If they are random (non-deterministic) then we conclude that the regression model is valid. I’m not going to go into detail as to why that is, for that you’ll have to take the course.</p>
+
+  <p>Anyways, observing these plots we notice they are random, so we can conclude the regression model $ Y=β_0+β_1x_1+β_2x_2+β_3x_3+β_4x_4+e $ is valid.</p>
+
+  <p>Alright we’re done. Semester’s over. Okay, so I’ve left out some topics. Some which are very exciting like variable selection, had to give a shoutout to that. However, this pretty much sums up regression analysis. This should provide a good overview into what you’re signing up for when taking this course.</p>
+</div></center>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    renderMathInElement(
+        document.body,
+        {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        }
+    );
+  });
+</script>
+</body>
+</html>

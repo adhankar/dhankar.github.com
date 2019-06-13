@@ -21,11 +21,8 @@ const base = "http://jathu.me/blog";
 // const base = "..";
 // Append styles
 insertStylesheet(base+"/src/style.css");
-insertStylesheet(base+"/src/katex.min.css");
-// Append scripts
-insertScript(base+"/src/katex.min.js");
 // Append favicon
-insertLink("image/x-icon", "shortcut icon", "files/fav.png");
+insertLink("image/x-icon", "shortcut icon", "http://dhankar.ca/files/fav.png");
 // Render Katex elements
 window.onload = function() {
 	// Set title according to first H1
