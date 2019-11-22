@@ -17,7 +17,7 @@ function insertScript(src) {
 	document.head.appendChild(script);
 }
 // Base url
-const base = "http://jathu.me/blog";
+const base = "http://dhankar.ca";
 // const base = "..";
 // Append styles
 insertStylesheet(base+"/src/style.css");
