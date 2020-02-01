@@ -6,11 +6,31 @@
 	<meta name="viewport" content="width=device-width">
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="src/start.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+  	$( function() {
+    	$( "#tabs" ).tabs();
+  	} );
+  	</script>
 </head>
 <body>
-<center><div id="container">
+<center>
+	<div id="container">
 	<b>Addi Dhankar</b>
-	<p><ul>
+
+	<div id = "tabs">
+
+		<ul class = "tabFilters">
+		<li style = "display: inline;" ><a style = "font-size: 13px; border: none;">Tags: </a></li>
+		<li style = "display: inline;" ><a style = "font-size: 13px;" href="#tabs-all">All</a></li>
+		<li style = "display: inline;" ><a style = "font-size: 13px;" href="#tabs-personal">Personal</a></li>
+		<li style = "display: inline;" ><a style = "font-size: 13px;" href="#tabs-stem">Math/Stats/ML</a></li>
+		<li style = "display: inline;" ><a style = "font-size: 13px;" href="#tabs-econfin">Economics/Finance</a></li>
+		</ul>
+
+	<div id="tabs-all">
+	<ul>
 	<li><a href="1580089301000">Thank you Kobe</a></li>
 	<li><a href="1560864023000">Time Series Analysis of S&P 500</a></li>
 	<li><a href="files/Mathematics_of_options.pdf">Mathematics of Pricing Options</a></li>
@@ -18,7 +38,36 @@
 	<li><a href="1560463750000">Kawhi to Raptors, DeRozan to Spurs</a></li>
 	<li><a href="1560462810000">Seamless Technology Is Underrated</a></li>
     <li><a href="1560444539000">What is Regression Analysis?</a></li>
-	</ul></p>
-</div></center>
+	</ul>
+	</div>
+
+	<div id="tabs-personal">
+	<ul>
+	<li><a href="1580089301000">Thank you Kobe</a></li>
+	<li><a href="1560463750000">Kawhi to Raptors, DeRozan to Spurs</a></li>
+	<li><a href="1560462810000">Seamless Technology Is Underrated</a></li>
+	</ul>
+	</div>
+
+	<div id="tabs-stem">
+	<ul>
+	<li><a href="1560864023000">Time Series Analysis of S&P 500</a></li>
+	<li><a href="files/Mathematics_of_options.pdf">Mathematics of Pricing Options</a></li>
+    <li><a href="1560444539000">What is Regression Analysis?</a></li>
+	</ul>
+	</div>
+
+	<div id="tabs-econfin">
+	<ul>
+	<li><a href="1560864023000">Time Series Analysis of S&P 500</a></li>
+	<li><a href="files/Mathematics_of_options.pdf">Mathematics of Pricing Options</a></li>
+	<li><a href="1560464651000">Trading Options</a></li>
+	</ul>
+	</div>
+
+	</div>
+	</div>
+
+</center>
 </body>
 </html>
